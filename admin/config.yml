@@ -1,9 +1,13 @@
-# Decap CMS config — scaffold only, not yet wired to a live backend.
-# See NEXT-STEPS.md for what has to happen before this is editable in a browser.
+# Decap CMS config.
+# Auth: Netlify Identity is discontinued for new projects, so this uses the
+# "github" backend instead — login happens via a GitHub OAuth App you create,
+# with Netlify acting as the OAuth handshake proxy (Project configuration ->
+# OAuth, not Identity). See NEXT-STEPS.md for the exact one-time setup.
 
 backend:
-  name: git-gateway   # requires Netlify Identity + git-gateway once this is deployed.
-  branch: main        # placeholder — repo doesn't exist yet.
+  name: github
+  repo: brichoward-spec/Portfolio
+  branch: main
 
 # Images are stored in-repo for now (simplest option, zero external dependency).
 # Brief flagged real hosting w/ automatic thumbnailing (Stephan's server or a
