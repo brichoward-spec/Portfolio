@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brianna Howard — Business Systems Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f1e4;
+    --bg-soft: #efe4d1;
+    --ink: #2b2318;
+    --ink-soft: #786d5c;
+    --line: rgba(43,35,24,0.12);
+    --accent: #3c6e8f;
+    --display: 'Sora', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--body);
+    line-height: 1.55; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  ::selection { background: var(--accent); color: var(--bg); }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+
+  .topbar { border-bottom: 1px solid var(--line); }
+  .topbar-inner { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; flex-wrap: wrap; gap: 10px; }
+  .topbar-inner .mark { font-family: var(--display); font-weight: 700; font-size: 1.05rem; }
+  .topbar-inner nav { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+  .topbar-inner nav a { text-decoration: none; color: var(--ink-soft); font-size: 0.9rem; transition: color .2s; }
+  .topbar-inner nav a:hover { color: var(--accent); }
+  .nav-divider { width: 1px; height: 14px; background: var(--line); }
+  .nav-cta {
+    color: var(--accent) !important; font-weight: 600;
+  }
+
+  .hero { padding: 64px 0 48px; }
+  .eyebrow { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; font-weight: 500; }
+  .hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 4.6vw, 2.9rem); letter-spacing: -0.01em; }
+  .hero .role { color: var(--accent); font-family: var(--display); font-weight: 600; font-size: 1.15rem; margin-top: 6px; }
+  .hero p.profile { margin-top: 22px; max-width: 620px; color: var(--ink-soft); font-size: 1.06rem; }
+
+  .contact-row { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 28px; font-size: 0.94rem; }
+  .contact-row a { text-decoration: none; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; }
+  .contact-row a:hover { color: var(--accent); }
+  .contact-row svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 30px;
+    background: var(--ink); color: var(--bg); font-weight: 600; font-size: 0.92rem;
+    padding: 13px 24px; border-radius: 8px; text-decoration: none;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--accent); }
+
+  section { padding: 56px 0; }
+  section + section { border-top: 1px solid var(--line); }
+  .section-head { margin-bottom: 32px; }
+  .section-head h2 { font-family: var(--display); font-weight: 700; font-size: 1.4rem; }
+
+  .job { margin-bottom: 34px; }
+  .job:last-child { margin-bottom: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 16px; }
+  .job-title { font-family: var(--display); font-weight: 700; font-size: 1.08rem; }
+  .job-org { color: var(--accent); font-weight: 600; }
+  .job-dates { color: var(--ink-soft); font-size: 0.88rem; white-space: nowrap; }
+  .job p { color: var(--ink-soft); margin-top: 10px; font-size: 0.98rem; max-width: 680px; }
+
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill-chip {
+    border: 1px solid var(--line); background: var(--bg-soft); border-radius: 20px;
+    padding: 7px 15px; font-size: 0.88rem; color: var(--ink);
+  }
+
+  .edu-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; }
+  .edu-school { font-family: var(--display); font-weight: 700; font-size: 1.05rem; }
+  .edu-degree { color: var(--ink-soft); }
+
+  .earlier-row {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px;
+    padding: 12px 0; border-top: 1px solid var(--line);
+  }
+  .earlier-row:first-child { border-top: none; }
+  .earlier-title { font-weight: 600; }
+  .earlier-org { color: var(--ink-soft); }
+  .earlier-dates { color: var(--ink-soft); font-size: 0.86rem; white-space: nowrap; }
+
+  .contact-final h2 { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
+  .contact-final p { color: var(--ink-soft); margin-top: 14px; max-width: 520px; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 24px 0 40px;
+    font-size: 0.85rem; color: var(--ink-soft);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 20px; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="wrap topbar-inner">
+      <span class="mark">Brianna Howard</span>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <span class="nav-divider"></span>
+        <a href="portfolio.html" class="nav-cta">View creative work →</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="hero wrap">
+    <div class="eyebrow">Business Systems Analyst</div>
+    <h1>Brianna Howard</h1>
+    <p class="profile">I fix broken processes for a living — manual, inconsistent, held together
+      with spreadsheets — and turn them into scalable, data-driven systems. Whatever tool gets
+      me there, I'll learn it fast.</p>
+
+    <div class="contact-row">
+      <a href="tel:3216959011">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        321-695-9011
+      </a>
+      <a href="mailto:brichoward@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+        brichoward@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/brianna-c-howard/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4zM13.32 8.48H9.5V21h3.77v-6.2c0-1.64.31-3.23 2.35-3.23s2.02 1.87 2.02 3.34V21H21v-6.88c0-3.42-.74-6.05-4.73-6.05-1.92 0-3.2 1.05-3.73 2.05h-.05z"/></svg>
+        LinkedIn
+      </a>
+      <span>Asheville, NC</span>
+    </div>
+
+    <a class="btn" href="B-C-HOWARD_Resume.pdf" download>Download Resume ↓</a>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience</h2></div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Business Systems Analyst <span class="job-org">— Exelon</span></div>
+          <div class="job-dates">2024 – June 2026 · Remote</div>
+        </div>
+        <p>Found the operational gaps across four IT organizations that nobody had mapped yet,
+          then built the systems to close them. Consolidated 600+ historical contracts and 140
+          active agreements into one contract lifecycle platform — a single source of truth
+          where there used to be spreadsheets and guesswork. Replaced fragmented manual
+          processes with dashboards, workflow automation, and reporting tools built in Power BI,
+          Power Apps, Power Automate, and SharePoint.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">Analyst / Project Coordinator <span class="job-org">— Exelon</span></div>
+          <div class="job-dates">2022 – 2024 · Remote</div>
+        </div>
+        <p>Owned forecasting, budgeting, procurement, and asset tracking across multiple IT
+          project teams. Rebuilt contract renewal and invoice management from the ground up
+          through SharePoint workflows and organizational restructuring that hadn't existed
+          before.</p>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <div class="job-title">IT Analyst / Project Coordinator <span class="job-org">— Corevitas</span></div>
+          <div class="job-dates">2020 – 2022 · Remote</div>
+        </div>
+        <p>Built and stress-tested the survey instruments behind pharmaceutical research data
+          collection — the tools researchers relied on, so they had to actually work. Ran data
+          migrations and kept documentation airtight across research programs with a lot of
+          moving parts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="earlier">
+    <div class="wrap">
+      <div class="section-head"><h2>Earlier Experience</h2></div>
+      <div class="earlier-row">
+        <div><span class="earlier-title">Bartender</span> <span class="earlier-org">— Trick Shots Billiards, Winter Park, FL</span></div>
+        <div class="earlier-dates">2017 – 2020</div>
+      </div>
+      <div class="earlier-row">
+        <div><span class="earlier-title">Manager</span> <span class="earlier-org">— Mystik, Inc., Orlando, FL</span></div>
+        <div class="earlier-dates">2012 – 2018</div>
+      </div>
+      <div class="earlier-row">
+        <div><span class="earlier-title">Server</span> <span class="earlier-org">— Ethos Vegan Kitchen, Winter Park, FL</span></div>
+        <div class="earlier-dates">2017</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="section-head"><h2>Skills</h2></div>
+      <div class="skills-grid">
+        <span class="skill-chip">Process Improvement</span>
+        <span class="skill-chip">Business Systems Development</span>
+        <span class="skill-chip">Workflow Automation</span>
+        <span class="skill-chip">Operational Reporting</span>
+        <span class="skill-chip">Contract Lifecycle Management</span>
+        <span class="skill-chip">Root Cause Analysis</span>
+        <span class="skill-chip">Power BI</span>
+        <span class="skill-chip">Power Apps</span>
+        <span class="skill-chip">Power Automate</span>
+        <span class="skill-chip">SharePoint</span>
+        <span class="skill-chip">Excel</span>
+        <span class="skill-chip">ServiceNow</span>
+        <span class="skill-chip">JIRA</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="section-head"><h2>Education</h2></div>
+      <div class="edu-row">
+        <div class="edu-school">University of Central Florida</div>
+        <div class="edu-degree">BA, Humanities</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-final">
+    <div class="wrap">
+      <h2>Let's talk.</h2>
+      <p>Open to new roles and conversations. Reach out directly, or grab the resume above.</p>
+      <div class="contact-row" style="margin-top: 24px;">
+        <a href="tel:3216959011">321-695-9011</a>
+        <a href="mailto:brichoward@gmail.com">brichoward@gmail.com</a>
+        <a href="https://www.linkedin.com/in/brianna-c-howard/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap">
+    <span>Brianna Howard</span>
+    <span>Business Systems Analyst · Asheville, NC</span>
+  </footer>
+
+</body>
+</html>

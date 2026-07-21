@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brianna Howard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8f1e4;
+    --ink: #2b2318;
+    --ink-soft: #786d5c;
+    --line: rgba(43,35,24,0.12);
+    --glow1: #ff2e88;
+    --glow5: #3c6e8f;
+    --display: 'Sora', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink); font-family: var(--body);
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 40px 24px; text-align: center;
+  }
+  .mark { font-family: var(--display); font-weight: 700; font-size: 1.6rem; margin-bottom: 8px; }
+  .sub { color: var(--ink-soft); font-size: 1rem; margin-bottom: 48px; }
+  .doors { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; max-width: 640px; }
+  .door {
+    flex: 1; min-width: 220px; text-decoration: none; color: var(--ink);
+    border: 1px solid var(--line); border-radius: 12px; padding: 36px 28px;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+    background: rgba(255,255,255,0.3);
+  }
+  .door:hover { transform: translateY(-3px); border-color: var(--ink); }
+  .door .label {
+    font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin-bottom: 10px;
+  }
+  .door .desc { color: var(--ink-soft); font-size: 0.94rem; line-height: 1.5; }
+  .door.creative .label { color: var(--glow1); }
+  .door.professional .label { color: var(--glow5); }
+  footer { margin-top: 56px; color: var(--ink-soft); font-size: 0.82rem; }
+</style>
+</head>
+<body>
+  <div class="mark">Brianna Howard</div>
+  <div class="sub">Creator. Business Systems Analyst. Pick a door.</div>
+  <div class="doors">
+    <a class="door professional" href="professional.html">
+      <div class="label">Professional</div>
+      <div class="desc">Resume, experience, and background — for the work you're hiring for.</div>
+    </a>
+    <a class="door creative" href="portfolio.html">
+      <div class="label">Creative</div>
+      <div class="desc">Art, materials, and the stuff I make when I'm not analyzing a process.</div>
+    </a>
+  </div>
+  <footer>brichoward@gmail.com &nbsp;·&nbsp; Asheville, NC</footer>
+</body>
+</html>

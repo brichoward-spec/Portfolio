@@ -1,0 +1,164 @@
+# Decap CMS config — scaffold only, not yet wired to a live backend.
+# See NEXT-STEPS.md for what has to happen before this is editable in a browser.
+
+backend:
+  name: git-gateway   # requires Netlify Identity + git-gateway once this is deployed.
+  branch: main        # placeholder — repo doesn't exist yet.
+
+# Images are stored in-repo for now (simplest option, zero external dependency).
+# Brief flagged real hosting w/ automatic thumbnailing (Stephan's server or a
+# bucket like Cloudflare R2) as an open question — swap media_folder/public_folder
+# for an external media library once that's decided. Not urgent: only ~8 real
+# images are sorted into Onsite/Art so far.
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home (Landing)"
+        file: "content/pages/home.md"
+        fields:
+          - { name: "tagline", label: "Tagline", widget: "string" }
+          - { name: "professional_desc", label: "Professional door description", widget: "text" }
+          - { name: "creative_desc", label: "Creative door description", widget: "text" }
+
+      - name: "professional"
+        label: "Professional Page"
+        file: "content/pages/professional.md"
+        fields:
+          - { name: "eyebrow", label: "Eyebrow", widget: "string" }
+          - { name: "name", label: "Name", widget: "string" }
+          - { name: "profile", label: "Profile blurb", widget: "text" }
+          - name: "contact"
+            label: "Contact info"
+            widget: "object"
+            fields:
+              - { name: "phone", label: "Phone", widget: "string" }
+              - { name: "email", label: "Email", widget: "string" }
+              - { name: "linkedin", label: "LinkedIn URL", widget: "string" }
+              - { name: "location", label: "Location", widget: "string" }
+          - { name: "resume_file", label: "Resume PDF", widget: "file" }
+          - name: "experience"
+            label: "Experience"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Job title", widget: "string" }
+              - { name: "org", label: "Organization", widget: "string" }
+              - { name: "dates", label: "Dates", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+          - name: "earlier_experience"
+            label: "Earlier Experience"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "org", label: "Organization", widget: "string" }
+              - { name: "dates", label: "Dates", widget: "string" }
+          - name: "skills"
+            label: "Skills"
+            widget: "list"
+            field: { name: "skill", label: "Skill", widget: "string" }
+          - name: "education"
+            label: "Education"
+            widget: "list"
+            fields:
+              - { name: "school", label: "School", widget: "string" }
+              - { name: "degree", label: "Degree", widget: "string" }
+          - { name: "contact_heading", label: "Contact section heading", widget: "string" }
+          - { name: "contact_sub", label: "Contact section subtext", widget: "text" }
+
+      - name: "about"
+        label: "About Page"
+        file: "content/pages/about.md"
+        fields:
+          - { name: "headshot", label: "Headshot", widget: "image" }
+          - name: "bio"
+            label: "Bio paragraphs"
+            widget: "list"
+            field: { name: "paragraph", label: "Paragraph", widget: "text" }
+          - name: "fur_family_current"
+            label: "Fur Family — current"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "animal", label: "Animal / species", widget: "string" }
+              - { name: "photo", label: "Photo", widget: "image" }
+          - name: "fur_family_lost"
+            label: "Fur Family — ones I've lost"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Name", widget: "string" }
+              - { name: "animal", label: "Animal / species", widget: "string" }
+              - { name: "photo", label: "Photo", widget: "image" }
+
+      - name: "portfolio"
+        label: "Creative Home Page"
+        file: "content/pages/portfolio.md"
+        fields:
+          - { name: "eyebrow", label: "Hero eyebrow", widget: "string" }
+          - { name: "h1", label: "Hero headline", widget: "string" }
+          - { name: "sub", label: "Hero subtext", widget: "text" }
+          - { name: "approach_heading", label: "Approach heading", widget: "string" }
+          - name: "materials"
+            label: "Materials"
+            widget: "list"
+            fields:
+              - { name: "name", label: "Material name", widget: "string" }
+              - { name: "count", label: "Piece count", widget: "number" }
+          - name: "tools"
+            label: "Digital tools"
+            widget: "list"
+            field: { name: "tool", label: "Tool name", widget: "string" }
+          - { name: "pull_quote", label: "Pull quote (sits under gallery)", widget: "string" }
+          - { name: "contact_heading", label: "Contact section heading", widget: "string" }
+          - { name: "contact_sub", label: "Contact section subtext", widget: "text" }
+
+  - name: "gallery"
+    label: "Gallery / Artwork"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - name: "category"
+        label: "Category"
+        widget: "select"
+        # Options mirror the real folders in Onsite/Art — NOT the placeholder
+        # material categories currently hardcoded in portfolio.html (Wood/
+        # Textile/Paper+Print/Found Objects/Paint/Metal). These two taxonomies
+        # don't match — see NEXT-STEPS.md.
+        options: ["Paintings", "Illustration", "Clay and Sculpture", "Resin, Wood and Functional Crafts", "Videos"]
+      - { name: "image", label: "Image", widget: "image" }
+      - name: "tags"
+        label: "Tags"
+        widget: "list"
+        required: false
+        field: { name: "tag", label: "Tag", widget: "string" }
+      - { name: "description", label: "Description", widget: "text", required: false }
+      - { name: "featured", label: "Featured on homepage", widget: "boolean", default: false }
+      - { name: "order", label: "Sort order", widget: "number", required: false }
+
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "image", label: "Image", widget: "image", required: false }
+      - { name: "body", label: "Body", widget: "markdown" }
+
+  - name: "link_lists"
+    label: "Link Lists"
+    folder: "content/link_lists"
+    create: true
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - name: "links"
+        label: "Links"
+        widget: "list"
+        fields:
+          - { name: "label", label: "Label", widget: "string" }
+          - { name: "url", label: "URL", widget: "string" }

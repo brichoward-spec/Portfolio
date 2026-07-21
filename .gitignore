@@ -1,0 +1,9 @@
+transcript.pdf
+B-C-HOWARD_Resume.docx
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
