@@ -66,6 +66,27 @@
         card.appendChild(body);
         galleryGrid.appendChild(card);
       });
+
+      const COLLAPSE_AT = 8;
+      const existingToggle = document.getElementById("gallery-toggle");
+      if (existingToggle) existingToggle.remove();
+
+      if (gallery.items.length > COLLAPSE_AT) {
+        galleryGrid.classList.add("collapsed");
+        const expandedLabel = "Show fewer ↑";
+        const collapsedLabel = "Show all " + gallery.items.length + " pieces ↓";
+        const toggle = CMS.el("button", {
+          class: "gallery-toggle",
+          text: collapsedLabel,
+          attrs: { id: "gallery-toggle", type: "button" },
+        });
+        toggle.addEventListener("click", () => {
+          const isCollapsed = galleryGrid.classList.toggle("collapsed");
+          toggle.textContent = isCollapsed ? collapsedLabel : expandedLabel;
+          if (isCollapsed) galleryGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+        galleryGrid.insertAdjacentElement("afterend", toggle);
+      }
     }
 
     CMS.setHtml("contact-heading", CMS.formatText(d.contact_heading || ""));
