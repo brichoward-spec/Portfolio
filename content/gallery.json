@@ -1,8 +1,424 @@
 {
   "items": [
-    { "title": "Roost", "image": "/img/uploads/portfolio-gallery-roost.jpg", "tag": "Paint", "color": "glow1" },
-    { "title": "Grown Wild", "image": "/img/uploads/portfolio-gallery-grown-wild.jpg", "tag": "Paint", "color": "glow2" },
-    { "title": "High Desert", "image": "/img/uploads/portfolio-gallery-high-desert.jpg", "tag": "Paint", "color": "glow3" },
-    { "title": "Desert Companions", "image": "/img/uploads/portfolio-gallery-desert-companions.jpg", "tag": "Paint", "color": "glow5" }
+    {
+      "title": "Painting 1",
+      "image": "/img/uploads/gallery-paintings-1.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 2",
+      "image": "/img/uploads/gallery-paintings-2.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 3",
+      "image": "/img/uploads/gallery-paintings-3.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 4",
+      "image": "/img/uploads/gallery-paintings-4.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 5",
+      "image": "/img/uploads/gallery-paintings-5.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 6",
+      "image": "/img/uploads/gallery-paintings-6.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 7",
+      "image": "/img/uploads/gallery-paintings-7.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 8",
+      "image": "/img/uploads/gallery-paintings-8.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 9",
+      "image": "/img/uploads/gallery-paintings-9.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 10",
+      "image": "/img/uploads/gallery-paintings-10.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 11",
+      "image": "/img/uploads/gallery-paintings-11.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 12",
+      "image": "/img/uploads/gallery-paintings-12.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 13",
+      "image": "/img/uploads/gallery-paintings-13.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 14",
+      "image": "/img/uploads/gallery-paintings-14.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 15",
+      "image": "/img/uploads/gallery-paintings-15.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 16",
+      "image": "/img/uploads/gallery-paintings-16.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 17",
+      "image": "/img/uploads/gallery-paintings-17.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 18",
+      "image": "/img/uploads/gallery-paintings-18.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Painting 19",
+      "image": "/img/uploads/gallery-paintings-19.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Angel and demon yin-yang (painted panel)",
+      "image": "/img/uploads/gallery-paintings-20.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Audrey Hepburn (ink and watercolor)",
+      "image": "/img/uploads/gallery-paintings-21.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Blue robot (acrylic on canvas)",
+      "image": "/img/uploads/gallery-paintings-22.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Figure in sunglasses (painted study)",
+      "image": "/img/uploads/gallery-paintings-23.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Freddy Krueger (painted)",
+      "image": "/img/uploads/gallery-paintings-24.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Poppies (painted canvas)",
+      "image": "/img/uploads/gallery-paintings-25.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Robot wall mural (painted)",
+      "image": "/img/uploads/gallery-paintings-26.jpg",
+      "tag": "Paintings",
+      "color": "glow1"
+    },
+    {
+      "title": "Illustration 1",
+      "image": "/img/uploads/gallery-illustration-1.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 2",
+      "image": "/img/uploads/gallery-illustration-2.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 3",
+      "image": "/img/uploads/gallery-illustration-3.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 4",
+      "image": "/img/uploads/gallery-illustration-4.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 5",
+      "image": "/img/uploads/gallery-illustration-5.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 6",
+      "image": "/img/uploads/gallery-illustration-6.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 7",
+      "image": "/img/uploads/gallery-illustration-7.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 8",
+      "image": "/img/uploads/gallery-illustration-8.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Illustration 9",
+      "image": "/img/uploads/gallery-illustration-9.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Army of Darkness (digital)",
+      "image": "/img/uploads/gallery-illustration-10.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Braveheart (digital)",
+      "image": "/img/uploads/gallery-illustration-11.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Casablanca (digital)",
+      "image": "/img/uploads/gallery-illustration-12.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Doctor Doom (ink and watercolor)",
+      "image": "/img/uploads/gallery-illustration-13.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Dog portrait (digital)",
+      "image": "/img/uploads/gallery-illustration-14.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Eureka (digital)",
+      "image": "/img/uploads/gallery-illustration-15.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Evil Dead (ink)",
+      "image": "/img/uploads/gallery-illustration-16.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Fight Club (digital)",
+      "image": "/img/uploads/gallery-illustration-17.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Firefly (digital)",
+      "image": "/img/uploads/gallery-illustration-18.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Grateful Dead (ink)",
+      "image": "/img/uploads/gallery-illustration-19.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Inglourious Basterds (digital)",
+      "image": "/img/uploads/gallery-illustration-20.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Killer Klowns From Outer Space (digital)",
+      "image": "/img/uploads/gallery-illustration-21.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Marvel lettering (ink)",
+      "image": "/img/uploads/gallery-illustration-22.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Marvin the Martian (ink)",
+      "image": "/img/uploads/gallery-illustration-23.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Spider-Man (ink)",
+      "image": "/img/uploads/gallery-illustration-24.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Star Wars (digital)",
+      "image": "/img/uploads/gallery-illustration-25.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "The Devils Rejects (digital)",
+      "image": "/img/uploads/gallery-illustration-26.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "The Devils Rejects (ink and marker)",
+      "image": "/img/uploads/gallery-illustration-27.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "The Godfather (digital)",
+      "image": "/img/uploads/gallery-illustration-28.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "The Witcher (digital)",
+      "image": "/img/uploads/gallery-illustration-29.jpg",
+      "tag": "Illustration",
+      "color": "glow2"
+    },
+    {
+      "title": "Sculpture 1",
+      "image": "/img/uploads/gallery-clay-sculpture-1.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Sculpture 2",
+      "image": "/img/uploads/gallery-clay-sculpture-2.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Sculpture 3",
+      "image": "/img/uploads/gallery-clay-sculpture-3.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Sculpture 4",
+      "image": "/img/uploads/gallery-clay-sculpture-4.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Sculpture 5",
+      "image": "/img/uploads/gallery-clay-sculpture-5.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Sculpture 6",
+      "image": "/img/uploads/gallery-clay-sculpture-6.jpg",
+      "tag": "Clay and Sculpture",
+      "color": "glow4"
+    },
+    {
+      "title": "Wood Craft 1",
+      "image": "/img/uploads/gallery-resin-wood-crafts-1.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 2",
+      "image": "/img/uploads/gallery-resin-wood-crafts-2.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 3",
+      "image": "/img/uploads/gallery-resin-wood-crafts-3.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 4",
+      "image": "/img/uploads/gallery-resin-wood-crafts-4.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 5",
+      "image": "/img/uploads/gallery-resin-wood-crafts-5.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 6",
+      "image": "/img/uploads/gallery-resin-wood-crafts-6.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 7",
+      "image": "/img/uploads/gallery-resin-wood-crafts-7.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 8",
+      "image": "/img/uploads/gallery-resin-wood-crafts-8.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    },
+    {
+      "title": "Wood Craft 9",
+      "image": "/img/uploads/gallery-resin-wood-crafts-9.jpg",
+      "tag": "Resin, Wood and Functional Crafts",
+      "color": "glow5"
+    }
   ]
 }
