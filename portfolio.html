@@ -164,19 +164,46 @@
     .wrap { padding: 0 20px; }
     section { padding: 64px 0; }
   }
-  /* ---------- Click-to-reveal color effect ---------- */
-  /* Whole page renders in black and white until a gallery piece is clicked,
-     which toggles full color on for the whole page (click any piece again
-     to go back). Replaces an earlier mouse-follow spotlight version. */
-  body { filter: grayscale(1); transition: filter 0.4s ease; }
-  body.color-mode { filter: grayscale(0); }
+  /* ---------- Cursor color-reveal effect ---------- */
+  /* Page is grayscale by default; a fixed overlay masks a circular hole
+     around the cursor so color blends through as you move the mouse.
+     Clicking a gallery piece hides the overlay entirely so the whole page
+     snaps to full color (click again to bring the spotlight back). */
+  .color-reveal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    backdrop-filter: grayscale(1);
+    -webkit-backdrop-filter: grayscale(1);
+    mask-image: radial-gradient(circle 80px at var(--mx, 50%) var(--my, 50%), transparent 0px, transparent 65px, black 85px);
+    -webkit-mask-image: radial-gradient(circle 80px at var(--mx, 50%) var(--my, 50%), transparent 0px, transparent 65px, black 85px);
+    transition: opacity 0.3s ease;
+  }
+  .color-reveal.color-mode { opacity: 0; }
   .piece { cursor: pointer; }
 </style>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
+    const overlay = document.createElement('div');
+    overlay.className = 'color-reveal';
+    document.body.appendChild(overlay);
+    document.addEventListener('mousemove', (e) => {
+      overlay.style.setProperty('--mx', e.clientX + 'px');
+      overlay.style.setProperty('--my', e.clientY + 'px');
+    });
+    function setFromTouch(e) {
+      if (e.touches && e.touches.length) {
+        overlay.style.setProperty('--mx', e.touches[0].clientX + 'px');
+        overlay.style.setProperty('--my', e.touches[0].clientY + 'px');
+      }
+    }
+    document.addEventListener('touchstart', setFromTouch, { passive: true });
+    document.addEventListener('touchmove', setFromTouch, { passive: true });
+
     document.body.addEventListener('click', (e) => {
       if (e.target.closest('.piece')) {
-        document.body.classList.toggle('color-mode');
+        overlay.classList.toggle('color-mode');
       }
     });
   });
