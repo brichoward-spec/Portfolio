@@ -46,7 +46,7 @@
     if (galleryGrid && gallery && Array.isArray(gallery.items)) {
       galleryGrid.innerHTML = "";
       gallery.items.forEach((piece) => {
-        const card = CMS.el("div", { class: "piece" });
+        const card = CMS.el("div", { class: "piece", attrs: { title: "Click to see the page in color" } });
         if (piece.image) {
           card.appendChild(
             CMS.el("div", {
