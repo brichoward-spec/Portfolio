@@ -119,13 +119,22 @@
   .piece-body .title { font-family: var(--display); font-weight: 600; font-size: 1.06rem; }
   .tag { display: inline-block; font-size: 0.76rem; letter-spacing: 0.03em; padding: 4px 11px; border-radius: 20px; margin-top: 0; color: var(--ink); font-weight: 600; }
 
-  .gallery-grid.collapsed .piece:nth-child(n+9) { display: none; }
+  .gallery-grid.collapsed .piece:nth-child(n+7) { display: none; }
   .gallery-toggle {
-    display: block; margin: 32px auto 0; background: none; border: 1.5px solid var(--line);
+    display: block; margin: 20px auto 0; background: none; border: 1.5px solid var(--line);
     color: var(--ink); font-family: var(--display); font-weight: 600; font-size: 0.92rem;
     padding: 12px 26px; border-radius: 30px; cursor: pointer; transition: border-color .2s, color .2s;
   }
   .gallery-toggle:hover { border-color: var(--glow1); color: var(--glow1); }
+
+  .gallery-category { margin-bottom: 52px; }
+  .gallery-category:last-child { margin-bottom: 0; }
+  .gallery-category-head {
+    display: flex; align-items: baseline; gap: 12px; margin-bottom: 22px;
+    padding-bottom: 12px; border-bottom: 1px solid var(--line);
+  }
+  .gallery-category-head h3 { font-family: var(--display); font-weight: 700; font-size: 1.15rem; }
+  .gallery-category-head .count { font-size: 0.82rem; color: var(--ink-soft); }
 
   /* ---------- Contact ---------- */
   .contact { position: relative; z-index: 10000; background: var(--bg); }
@@ -295,22 +304,12 @@
         <div class="eyebrow">Selected Work</div>
         <h2>A few things I've made</h2>
       </div>
-      <div class="gallery-grid" id="gallery-grid">
-        <div class="piece">
-          <div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-roost.jpg');"></div>
-          <div class="piece-body"><span class="tag" style="background: var(--glow1);">Paint</span></div>
-        </div>
-        <div class="piece">
-          <div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-grown-wild.jpg');"></div>
-          <div class="piece-body"><span class="tag" style="background: var(--glow2);">Paint</span></div>
-        </div>
-        <div class="piece">
-          <div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-high-desert.jpg');"></div>
-          <div class="piece-body"><span class="tag" style="background: var(--glow3);">Paint</span></div>
-        </div>
-        <div class="piece">
-          <div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-desert-companions.jpg');"></div>
-          <div class="piece-body"><span class="tag" style="background: var(--glow5);">Paint</span></div>
+      <div id="gallery-groups">
+        <div class="gallery-grid">
+          <div class="piece"><div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-roost.jpg');"></div></div>
+          <div class="piece"><div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-grown-wild.jpg');"></div></div>
+          <div class="piece"><div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-high-desert.jpg');"></div></div>
+          <div class="piece"><div class="piece-art filled" style="background-image: url('/img/uploads/portfolio-gallery-desert-companions.jpg');"></div></div>
         </div>
       </div>
     </div>

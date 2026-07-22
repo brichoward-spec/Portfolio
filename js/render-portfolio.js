@@ -42,51 +42,68 @@
       });
     }
 
-    const galleryGrid = document.getElementById("gallery-grid");
-    if (galleryGrid && gallery && Array.isArray(gallery.items)) {
-      galleryGrid.innerHTML = "";
+    const galleryGroups = document.getElementById("gallery-groups");
+    if (galleryGroups && gallery && Array.isArray(gallery.items)) {
+      galleryGroups.innerHTML = "";
+
+      // Group by tag/category, preserving first-seen order, so pieces read as
+      // "Paintings", "Illustration", etc. instead of one long undifferentiated
+      // grid — the tag chip on every card becomes redundant once grouped.
+      const groups = [];
+      const byTag = {};
       gallery.items.forEach((piece) => {
-        const card = CMS.el("div", { class: "piece", attrs: { title: "Click to see the page in color" } });
-        if (piece.image) {
-          card.appendChild(
-            CMS.el("div", {
-              class: "piece-art filled",
-              style: "background-image: url('" + piece.image + "');",
-            })
-          );
+        const tag = piece.tag || "Work";
+        if (!byTag[tag]) {
+          byTag[tag] = { tag, pieces: [] };
+          groups.push(byTag[tag]);
         }
-        const body = CMS.el("div", { class: "piece-body" });
-        body.appendChild(
-          CMS.el("span", {
-            class: "tag",
-            text: piece.tag,
-            style: "background: var(--" + (piece.color || "glow1") + ");",
-          })
-        );
-        card.appendChild(body);
-        galleryGrid.appendChild(card);
+        byTag[tag].pieces.push(piece);
       });
 
-      const COLLAPSE_AT = 8;
-      const existingToggle = document.getElementById("gallery-toggle");
-      if (existingToggle) existingToggle.remove();
+      const COLLAPSE_AT = 6;
 
-      if (gallery.items.length > COLLAPSE_AT) {
-        galleryGrid.classList.add("collapsed");
-        const expandedLabel = "Show fewer ↑";
-        const collapsedLabel = "Show all " + gallery.items.length + " pieces ↓";
-        const toggle = CMS.el("button", {
-          class: "gallery-toggle",
-          text: collapsedLabel,
-          attrs: { id: "gallery-toggle", type: "button" },
+      groups.forEach((group) => {
+        const section = CMS.el("div", { class: "gallery-category" });
+
+        const head = CMS.el("div", { class: "gallery-category-head" });
+        head.appendChild(CMS.el("h3", { text: group.tag }));
+        head.appendChild(CMS.el("span", { class: "count", text: group.pieces.length + " pieces" }));
+        section.appendChild(head);
+
+        const grid = CMS.el("div", { class: "gallery-grid" });
+        group.pieces.forEach((piece) => {
+          const card = CMS.el("div", { class: "piece", attrs: { title: "Click to see the page in color" } });
+          if (piece.image) {
+            card.appendChild(
+              CMS.el("div", {
+                class: "piece-art filled",
+                style: "background-image: url('" + piece.image + "');",
+              })
+            );
+          }
+          grid.appendChild(card);
         });
-        toggle.addEventListener("click", () => {
-          const isCollapsed = galleryGrid.classList.toggle("collapsed");
-          toggle.textContent = isCollapsed ? collapsedLabel : expandedLabel;
-          if (isCollapsed) galleryGrid.scrollIntoView({ behavior: "smooth", block: "start" });
-        });
-        galleryGrid.insertAdjacentElement("afterend", toggle);
-      }
+        section.appendChild(grid);
+
+        if (group.pieces.length > COLLAPSE_AT) {
+          grid.classList.add("collapsed");
+          const expandedLabel = "Show fewer ↑";
+          const collapsedLabel = "Show all " + group.pieces.length + " ↓";
+          const toggle = CMS.el("button", {
+            class: "gallery-toggle",
+            text: collapsedLabel,
+            attrs: { type: "button" },
+          });
+          toggle.addEventListener("click", () => {
+            const isCollapsed = grid.classList.toggle("collapsed");
+            toggle.textContent = isCollapsed ? collapsedLabel : expandedLabel;
+            if (isCollapsed) section.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+          section.appendChild(toggle);
+        }
+
+        galleryGroups.appendChild(section);
+      });
     }
 
     CMS.setHtml("contact-heading", CMS.formatText(d.contact_heading || ""));
