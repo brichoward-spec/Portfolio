@@ -56,7 +56,6 @@
           );
         }
         const body = CMS.el("div", { class: "piece-body" });
-        body.appendChild(CMS.el("div", { class: "title", text: piece.title }));
         body.appendChild(
           CMS.el("span", {
             class: "tag",
