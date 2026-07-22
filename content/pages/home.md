@@ -1,5 +1,0 @@
----
-tagline: "Creator. Business Systems Analyst. Pick a door."
-professional_desc: "Resume, experience, and background — for the work you're hiring for."
-creative_desc: "Art, materials, and the stuff I make when I'm not analyzing a process."
----

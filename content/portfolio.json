@@ -1,0 +1,18 @@
+{
+  "eyebrow": "Problem-first, material-agnostic",
+  "h1": "I don't ask what a thing is.\nI ask what it **could become.**",
+  "sub": "Wood, paint, paper, code — whatever gets the job done.",
+  "approach_heading": "Driftwood doesn't know it's not a doorway.",
+  "pull_quote": "If it can be pictured, it can be improved. Or at least made prettier.",
+  "materials": [
+    { "name": "Wood", "count": 12 },
+    { "name": "Textile", "count": 9 },
+    { "name": "Paper + Print", "count": 15 },
+    { "name": "Found Objects", "count": 11 },
+    { "name": "Paint", "count": 8 },
+    { "name": "Metal", "count": 7 }
+  ],
+  "tools": ["Procreate", "Adobe Photoshop", "Adobe Illustrator", "GIMP", "Blender"],
+  "contact_heading": "Got a problem **worth solving weird**?",
+  "contact_sub": "Fun, cheap, interesting — pick two, and I'll find the third."
+}

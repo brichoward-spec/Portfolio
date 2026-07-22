@@ -1,0 +1,57 @@
+{
+  "eyebrow": "Business Systems Analyst",
+  "name": "Brianna Howard",
+  "profile": "I fix broken processes for a living — manual, inconsistent, held together with spreadsheets — and turn them into scalable, data-driven systems. Whatever tool gets me there, I'll learn it fast.",
+  "contact": {
+    "phone": "321-695-9011",
+    "email": "brichoward@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/brianna-c-howard/",
+    "location": "Asheville, NC"
+  },
+  "resume_file": "/B-C-HOWARD_Resume.pdf",
+  "experience": [
+    {
+      "title": "Business Systems Analyst",
+      "org": "Exelon",
+      "dates": "2024 – June 2026 · Remote",
+      "description": "Found the operational gaps across four IT organizations that nobody had mapped yet, then built the systems to close them. Consolidated 600+ historical contracts and 140 active agreements into one contract lifecycle platform — a single source of truth where there used to be spreadsheets and guesswork. Replaced fragmented manual processes with dashboards, workflow automation, and reporting tools built in Power BI, Power Apps, Power Automate, and SharePoint."
+    },
+    {
+      "title": "Analyst / Project Coordinator",
+      "org": "Exelon",
+      "dates": "2022 – 2024 · Remote",
+      "description": "Owned forecasting, budgeting, procurement, and asset tracking across multiple IT project teams. Rebuilt contract renewal and invoice management from the ground up through SharePoint workflows and organizational restructuring that hadn't existed before."
+    },
+    {
+      "title": "IT Analyst / Project Coordinator",
+      "org": "Corevitas",
+      "dates": "2020 – 2022 · Remote",
+      "description": "Built and stress-tested the survey instruments behind pharmaceutical research data collection — the tools researchers relied on, so they had to actually work. Ran data migrations and kept documentation airtight across research programs with a lot of moving parts."
+    }
+  ],
+  "earlier_experience": [
+    { "title": "Bartender", "org": "Trick Shots Billiards, Winter Park, FL", "dates": "2017 – 2020" },
+    { "title": "Manager", "org": "Mystik, Inc., Orlando, FL", "dates": "2012 – 2018" },
+    { "title": "Server", "org": "Ethos Vegan Kitchen, Winter Park, FL", "dates": "2017" }
+  ],
+  "skills": [
+    "Process Improvement",
+    "Business Systems Development",
+    "Workflow Automation",
+    "Operational Reporting",
+    "Contract Lifecycle Management",
+    "Root Cause Analysis",
+    "Power BI",
+    "Power Apps",
+    "Power Automate",
+    "SharePoint",
+    "Excel",
+    "ServiceNow",
+    "JIRA"
+  ],
+  "education": [
+    { "school": "University of Central Florida", "degree": "BA, Humanities" }
+  ],
+  "contact_heading": "Let's talk.",
+  "contact_sub": "Open to new roles and conversations. Reach out directly, or grab the resume above."
+}

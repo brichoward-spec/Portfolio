@@ -1,0 +1,20 @@
+{
+  "headshot": "/img/uploads/about-headshot.jpg",
+  "bio": [
+    "Failed art student; successful Humanities major.",
+    "Worked a handful of very different jobs. Same pattern each time: hand me a mess, I'll sort it out.",
+    "Never stopped making things on the side. Not attached to any one medium.",
+    "Live in Asheville, NC with my boyfriend and our corgi Frank.",
+    "Watch a lot of movies and TV. Ran a review site in college. That's me."
+  ],
+  "fur_family": [
+    { "name": "Frank", "group": "Frank", "photo": "/img/uploads/about-fur-frank.jpg", "remembered": false },
+    { "name": "Korra", "group": "My girls", "photo": "/img/uploads/about-fur-korra.jpg", "remembered": false },
+    { "name": "Luna", "group": "My girls", "photo": "/img/uploads/about-fur-luna.jpg", "remembered": false },
+    { "name": "Dory", "group": "Ones I've lost", "photo": "/img/uploads/about-fur-dory.jpg", "remembered": true },
+    { "name": "Kodi", "group": "Ones I've lost", "photo": "/img/uploads/about-fur-kodi.jpg", "remembered": true },
+    { "name": "Gizmo", "group": "Ones I've lost", "photo": "/img/uploads/about-fur-gizmo.jpg", "remembered": true }
+  ],
+  "contact_heading": "Got a problem **worth solving weird**?",
+  "contact_sub": "Fun, cheap, interesting — pick two, and I'll find the third."
+}

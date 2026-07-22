@@ -3,18 +3,20 @@
 # "github" backend instead — login happens via a GitHub OAuth App you create,
 # with Netlify acting as the OAuth handshake proxy (Project configuration ->
 # OAuth, not Identity). See NEXT-STEPS.md for the exact one-time setup.
+#
+# Content is plain JSON files under content/ (no build step — the pages fetch
+# these directly at runtime via js/render-*.js). That's why every file/gallery
+# entry below sets format: json and why "gallery" is one file with a repeating
+# list field instead of a folder collection: a folder of many small files can't
+# be listed by a browser without a server, so everything that needs to be
+# addable/reorderable from the CMS lives as a list inside a single JSON file.
 
 backend:
   name: github
   repo: brichoward-spec/Portfolio
   branch: main
 
-# Images are stored in-repo for now (simplest option, zero external dependency).
-# Brief flagged real hosting w/ automatic thumbnailing (Stephan's server or a
-# bucket like Cloudflare R2) as an open question — swap media_folder/public_folder
-# for an external media library once that's decided. Not urgent: only ~8 real
-# images are sorted into Onsite/Art so far.
-media_folder: "static/img/uploads"
+media_folder: "img/uploads"
 public_folder: "/img/uploads"
 
 collections:
@@ -23,7 +25,8 @@ collections:
     files:
       - name: "home"
         label: "Home (Landing)"
-        file: "content/pages/home.md"
+        file: "content/home.json"
+        format: "json"
         fields:
           - { name: "tagline", label: "Tagline", widget: "string" }
           - { name: "professional_desc", label: "Professional door description", widget: "text" }
@@ -31,7 +34,8 @@ collections:
 
       - name: "professional"
         label: "Professional Page"
-        file: "content/pages/professional.md"
+        file: "content/professional.json"
+        format: "json"
         fields:
           - { name: "eyebrow", label: "Eyebrow", widget: "string" }
           - { name: "name", label: "Name", widget: "string" }
@@ -75,36 +79,35 @@ collections:
 
       - name: "about"
         label: "About Page"
-        file: "content/pages/about.md"
+        file: "content/about.json"
+        format: "json"
         fields:
           - { name: "headshot", label: "Headshot", widget: "image" }
           - name: "bio"
             label: "Bio paragraphs"
             widget: "list"
-            field: { name: "paragraph", label: "Paragraph", widget: "text" }
-          - name: "fur_family_current"
-            label: "Fur Family — current"
+            field: { name: "bio", label: "Paragraph", widget: "text" }
+          - name: "fur_family"
+            label: "Fur Family"
             widget: "list"
             fields:
               - { name: "name", label: "Name", widget: "string" }
-              - { name: "animal", label: "Animal / species", widget: "string" }
+              - { name: "group", label: "Group label (e.g. \"Frank\", \"My girls\", \"Ones I've lost\") — pets sharing a group label are shown together", widget: "string" }
               - { name: "photo", label: "Photo", widget: "image" }
-          - name: "fur_family_lost"
-            label: "Fur Family — ones I've lost"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "animal", label: "Animal / species", widget: "string" }
-              - { name: "photo", label: "Photo", widget: "image" }
+              - { name: "remembered", label: "In memoriam (shown at reduced opacity)", widget: "boolean", default: false }
+          - { name: "contact_heading", label: "Contact section heading (use **double asterisks** for the pink-accented part)", widget: "string" }
+          - { name: "contact_sub", label: "Contact section subtext", widget: "text" }
 
       - name: "portfolio"
         label: "Creative Home Page"
-        file: "content/pages/portfolio.md"
+        file: "content/portfolio.json"
+        format: "json"
         fields:
           - { name: "eyebrow", label: "Hero eyebrow", widget: "string" }
-          - { name: "h1", label: "Hero headline", widget: "string" }
+          - { name: "h1", label: "Hero headline (use **double asterisks** for the pink-accented part)", widget: "text" }
           - { name: "sub", label: "Hero subtext", widget: "text" }
           - { name: "approach_heading", label: "Approach heading", widget: "string" }
+          - { name: "pull_quote", label: "Pull quote (sits under gallery)", widget: "string" }
           - name: "materials"
             label: "Materials"
             widget: "list"
@@ -115,54 +118,23 @@ collections:
             label: "Digital tools"
             widget: "list"
             field: { name: "tool", label: "Tool name", widget: "string" }
-          - { name: "pull_quote", label: "Pull quote (sits under gallery)", widget: "string" }
-          - { name: "contact_heading", label: "Contact section heading", widget: "string" }
+          - { name: "contact_heading", label: "Contact section heading (use **double asterisks** for the pink-accented part)", widget: "string" }
           - { name: "contact_sub", label: "Contact section subtext", widget: "text" }
 
-  - name: "gallery"
-    label: "Gallery / Artwork"
-    folder: "content/gallery"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - name: "category"
-        label: "Category"
-        widget: "select"
-        # Options mirror the real folders in Onsite/Art — NOT the placeholder
-        # material categories currently hardcoded in portfolio.html (Wood/
-        # Textile/Paper+Print/Found Objects/Paint/Metal). These two taxonomies
-        # don't match — see NEXT-STEPS.md.
-        options: ["Paintings", "Illustration", "Clay and Sculpture", "Resin, Wood and Functional Crafts", "Videos"]
-      - { name: "image", label: "Image", widget: "image" }
-      - name: "tags"
-        label: "Tags"
-        widget: "list"
-        required: false
-        field: { name: "tag", label: "Tag", widget: "string" }
-      - { name: "description", label: "Description", widget: "text", required: false }
-      - { name: "featured", label: "Featured on homepage", widget: "boolean", default: false }
-      - { name: "order", label: "Sort order", widget: "number", required: false }
-
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
-    create: true
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "image", label: "Image", widget: "image", required: false }
-      - { name: "body", label: "Body", widget: "markdown" }
-
-  - name: "link_lists"
-    label: "Link Lists"
-    folder: "content/link_lists"
-    create: true
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - name: "links"
-        label: "Links"
-        widget: "list"
+      - name: "gallery"
+        label: "Gallery / Artwork"
+        file: "content/gallery.json"
+        format: "json"
         fields:
-          - { name: "label", label: "Label", widget: "string" }
-          - { name: "url", label: "URL", widget: "string" }
+          - name: "items"
+            label: "Pieces"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "tag", label: "Tag / category label", widget: "string" }
+              - name: "color"
+                label: "Tag accent color"
+                widget: "select"
+                options: ["glow1", "glow2", "glow3", "glow4", "glow5", "glow6"]
+                default: "glow1"

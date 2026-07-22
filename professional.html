@@ -122,35 +122,36 @@
   </div>
 
   <div class="hero wrap">
-    <div class="eyebrow">Business Systems Analyst</div>
-    <h1>Brianna Howard</h1>
-    <p class="profile">I fix broken processes for a living — manual, inconsistent, held together
+    <div class="eyebrow" id="hero-eyebrow">Business Systems Analyst</div>
+    <h1 id="hero-name">Brianna Howard</h1>
+    <p class="profile" id="hero-profile">I fix broken processes for a living — manual, inconsistent, held together
       with spreadsheets — and turn them into scalable, data-driven systems. Whatever tool gets
       me there, I'll learn it fast.</p>
 
     <div class="contact-row">
-      <a href="tel:3216959011">
+      <a href="tel:3216959011" id="contact-phone">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         321-695-9011
       </a>
-      <a href="mailto:brichoward@gmail.com">
+      <a href="mailto:brichoward@gmail.com" id="contact-email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
         brichoward@gmail.com
       </a>
-      <a href="https://www.linkedin.com/in/brianna-c-howard/" target="_blank" rel="noopener">
+      <a href="https://www.linkedin.com/in/brianna-c-howard/" target="_blank" rel="noopener" id="contact-linkedin">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4zM13.32 8.48H9.5V21h3.77v-6.2c0-1.64.31-3.23 2.35-3.23s2.02 1.87 2.02 3.34V21H21v-6.88c0-3.42-.74-6.05-4.73-6.05-1.92 0-3.2 1.05-3.73 2.05h-.05z"/></svg>
         LinkedIn
       </a>
-      <span>Asheville, NC</span>
+      <span id="contact-location">Asheville, NC</span>
     </div>
 
-    <a class="btn" href="B-C-HOWARD_Resume.pdf" download>Download Resume ↓</a>
+    <a class="btn" href="B-C-HOWARD_Resume.pdf" download id="resume-link">Download Resume ↓</a>
   </div>
 
   <section id="experience">
     <div class="wrap">
       <div class="section-head"><h2>Experience</h2></div>
 
+      <div id="experience-list">
       <div class="job">
         <div class="job-head">
           <div class="job-title">Business Systems Analyst <span class="job-org">— Exelon</span></div>
@@ -185,12 +186,14 @@
           migrations and kept documentation airtight across research programs with a lot of
           moving parts.</p>
       </div>
+      </div>
     </div>
   </section>
 
   <section id="earlier">
     <div class="wrap">
       <div class="section-head"><h2>Earlier Experience</h2></div>
+      <div id="earlier-list">
       <div class="earlier-row">
         <div><span class="earlier-title">Bartender</span> <span class="earlier-org">— Trick Shots Billiards, Winter Park, FL</span></div>
         <div class="earlier-dates">2017 – 2020</div>
@@ -203,13 +206,14 @@
         <div><span class="earlier-title">Server</span> <span class="earlier-org">— Ethos Vegan Kitchen, Winter Park, FL</span></div>
         <div class="earlier-dates">2017</div>
       </div>
+      </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="wrap">
       <div class="section-head"><h2>Skills</h2></div>
-      <div class="skills-grid">
+      <div class="skills-grid" id="skills-list">
         <span class="skill-chip">Process Improvement</span>
         <span class="skill-chip">Business Systems Development</span>
         <span class="skill-chip">Workflow Automation</span>
@@ -230,17 +234,19 @@
   <section id="education">
     <div class="wrap">
       <div class="section-head"><h2>Education</h2></div>
+      <div id="education-list">
       <div class="edu-row">
         <div class="edu-school">University of Central Florida</div>
         <div class="edu-degree">BA, Humanities</div>
+      </div>
       </div>
     </div>
   </section>
 
   <section id="contact" class="contact-final">
     <div class="wrap">
-      <h2>Let's talk.</h2>
-      <p>Open to new roles and conversations. Reach out directly, or grab the resume above.</p>
+      <h2 id="contact-heading">Let's talk.</h2>
+      <p id="contact-sub">Open to new roles and conversations. Reach out directly, or grab the resume above.</p>
       <div class="contact-row" style="margin-top: 24px;">
         <a href="tel:3216959011">321-695-9011</a>
         <a href="mailto:brichoward@gmail.com">brichoward@gmail.com</a>
@@ -254,5 +260,7 @@
     <span>Business Systems Analyst · Asheville, NC</span>
   </footer>
 
+  <script src="js/content.js"></script>
+  <script src="js/render-professional.js"></script>
 </body>
 </html>

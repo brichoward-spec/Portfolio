@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "title": "Roost", "image": "/img/uploads/portfolio-gallery-roost.jpg", "tag": "Paint", "color": "glow1" },
+    { "title": "Grown Wild", "image": "/img/uploads/portfolio-gallery-grown-wild.jpg", "tag": "Paint", "color": "glow2" },
+    { "title": "High Desert", "image": "/img/uploads/portfolio-gallery-high-desert.jpg", "tag": "Paint", "color": "glow3" },
+    { "title": "Desert Companions", "image": "/img/uploads/portfolio-gallery-desert-companions.jpg", "tag": "Paint", "color": "glow5" }
+  ]
+}
