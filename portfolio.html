@@ -52,7 +52,7 @@
 
   /* ---------- Hero ---------- */
   .hero { padding: 108px 0 84px; position: relative; }
-  .brush-art { position: absolute; top: -10px; right: -10px; width: 300px; height: 320px; z-index: 0; pointer-events: none; }
+  .brush-art { position: absolute; top: -6px; right: -20px; width: 380px; height: auto; z-index: 0; pointer-events: none; }
 
   @media (max-width: 800px) { .brush-art { display: none; } }
 
@@ -227,29 +227,7 @@
   </div>
 
   <div class="hero wrap">
-    <svg class="brush-art" viewBox="0 0 300 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- brush handle -->
-      <line x1="272" y1="18" x2="168" y2="130" stroke="#a9754a" stroke-width="16" stroke-linecap="round"/>
-      <line x1="272" y1="18" x2="168" y2="130" stroke="#c98f5c" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
-      <!-- ferrule (metal band) -->
-      <line x1="182" y1="115" x2="160" y2="140" stroke="#c9ccd1" stroke-width="20" stroke-linecap="butt"/>
-      <line x1="182" y1="115" x2="160" y2="140" stroke="#eef0f2" stroke-width="6" stroke-linecap="butt" opacity="0.7"/>
-      <!-- bristles, loaded with paint -->
-      <path d="M170,128 C180,136 182,146 176,156 C168,168 150,178 138,180 C132,181 128,176 132,168 C140,152 152,138 170,128Z" fill="var(--glow5)"/>
-      <path d="M150,150 C156,156 156,164 150,170 C144,176 134,180 128,178 C124,176 124,171 128,165 C134,157 142,152 150,150Z" fill="var(--glow5)" opacity="0.85"/>
-      <!-- fresh stroke on the page -->
-      <path d="M132,178 C108,172 78,176 56,192 C36,206 32,224 50,230 C74,236 108,222 128,200 C134,193 134,184 132,178Z" fill="var(--glow1)"/>
-      <!-- drips falling from the bristle tip -->
-      <path d="M136,180 C130,196 126,214 132,226 C136,234 146,232 145,222 C143,208 140,192 136,180Z" fill="var(--glow3)"/>
-      <path d="M116,196 C112,206 110,218 115,226 C118,231 125,229 124,221 C123,211 120,202 116,196Z" fill="var(--glow6)"/>
-      <circle cx="132" cy="240" r="6" fill="var(--glow3)"/>
-      <circle cx="150" cy="252" r="4" fill="var(--glow6)"/>
-      <circle cx="60" cy="238" r="5" fill="var(--glow1)"/>
-      <!-- a couple of loose spatter flecks -->
-      <circle cx="220" cy="90" r="4" fill="var(--glow3)"/>
-      <circle cx="238" cy="70" r="3" fill="var(--glow2)"/>
-      <ellipse cx="204" cy="112" rx="6" ry="4" fill="var(--glow5)" transform="rotate(20 204 112)"/>
-    </svg>
+    <img class="brush-art" src="/img/uploads/portfolio-hero-brush.png" alt="">
     <div class="eyebrow" id="hero-eyebrow">Problem-first, material-agnostic</div>
     <h1 id="hero-h1">I don't ask what a thing is.<br>I ask what it <span class="accent">could become.</span></h1>
     <p class="hero-sub" id="hero-sub">Wood, paint, paper, code — whatever gets the job done.</p>
