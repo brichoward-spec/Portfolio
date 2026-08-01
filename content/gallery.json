@@ -214,19 +214,22 @@
       "title": "Army of Darkness (digital)",
       "image": "/img/uploads/gallery-illustration-10.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Braveheart (digital)",
       "image": "/img/uploads/gallery-illustration-11.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Casablanca (digital)",
       "image": "/img/uploads/gallery-illustration-12.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Doctor Doom (ink and watercolor)",
@@ -238,13 +241,15 @@
       "title": "Dog portrait (digital)",
       "image": "/img/uploads/gallery-illustration-14.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Eureka (digital)",
       "image": "/img/uploads/gallery-illustration-15.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Evil Dead (ink)",
@@ -256,13 +261,15 @@
       "title": "Fight Club (digital)",
       "image": "/img/uploads/gallery-illustration-17.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Firefly (digital)",
       "image": "/img/uploads/gallery-illustration-18.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Grateful Dead (ink)",
@@ -274,13 +281,15 @@
       "title": "Inglourious Basterds (digital)",
       "image": "/img/uploads/gallery-illustration-20.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Killer Klowns From Outer Space (digital)",
       "image": "/img/uploads/gallery-illustration-21.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Marvel lettering (ink)",
@@ -304,13 +313,15 @@
       "title": "Star Wars (digital)",
       "image": "/img/uploads/gallery-illustration-25.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "The Devils Rejects (digital)",
       "image": "/img/uploads/gallery-illustration-26.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "The Devils Rejects (ink and marker)",
@@ -322,13 +333,15 @@
       "title": "The Godfather (digital)",
       "image": "/img/uploads/gallery-illustration-28.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "The Witcher (digital)",
       "image": "/img/uploads/gallery-illustration-29.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Sculpture 1",
@@ -345,12 +358,6 @@
     {
       "title": "Sculpture 3",
       "image": "/img/uploads/gallery-clay-sculpture-3.jpg",
-      "tag": "Clay and Sculpture",
-      "color": "glow4"
-    },
-    {
-      "title": "Sculpture 4",
-      "image": "/img/uploads/gallery-clay-sculpture-4.jpg",
       "tag": "Clay and Sculpture",
       "color": "glow4"
     },
