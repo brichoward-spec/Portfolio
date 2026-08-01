@@ -109,12 +109,6 @@
       "color": "glow1"
     },
     {
-      "title": "Painting 19",
-      "image": "/img/uploads/gallery-paintings-19.jpg",
-      "tag": "Paintings",
-      "color": "glow1"
-    },
-    {
       "title": "Angel and demon yin-yang (painted panel)",
       "image": "/img/uploads/gallery-paintings-20.jpg",
       "tag": "Paintings",
@@ -434,6 +428,76 @@
       "image": "/img/uploads/gallery-resin-wood-crafts-9.jpg",
       "tag": "Resin, Wood and Functional Crafts",
       "color": "glow5"
+    },
+    {
+      "title": "Lakeside",
+      "image": "/img/uploads/gallery-illustration-30.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Puppy Love",
+      "image": "/img/uploads/gallery-illustration-31.png",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Kiss",
+      "image": "/img/uploads/gallery-illustration-32.png",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Rollout",
+      "image": "/img/uploads/gallery-illustration-33.png",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Man with Cat",
+      "image": "/img/uploads/gallery-illustration-34.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Cosmic Portrait (I)",
+      "image": "/img/uploads/gallery-illustration-35.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Cosmic Portrait (II)",
+      "image": "/img/uploads/gallery-illustration-36.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Stove",
+      "image": "/img/uploads/gallery-illustration-37.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Paper Moon",
+      "image": "/img/uploads/gallery-illustration-38.png",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
+    },
+    {
+      "title": "Korra (Digital Portrait)",
+      "image": "/img/uploads/gallery-illustration-39.jpg",
+      "tag": "Illustration",
+      "color": "glow2",
+      "digital": true
     }
   ]
 }
