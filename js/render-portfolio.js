@@ -84,6 +84,18 @@
           if (piece.digital) {
             card.appendChild(CMS.el("div", { class: "digital-tape", text: "DIGITAL" }));
           }
+          if (piece.image) {
+            const expandBtn = CMS.el("button", {
+              class: "piece-expand",
+              attrs: { type: "button", title: "View full size", "aria-label": "View full size" },
+              html: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 00-2 2v3"/><path d="M16 3h3a2 2 0 012 2v3"/><path d="M8 21H5a2 2 0 01-2-2v-3"/><path d="M16 21h3a2 2 0 002-2v-3"/></svg>',
+            });
+            expandBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
+              window.openLightbox(piece.image);
+            });
+            card.appendChild(expandBtn);
+          }
           grid.appendChild(card);
         });
         section.appendChild(grid);

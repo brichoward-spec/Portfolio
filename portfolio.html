@@ -196,6 +196,31 @@
   }
   .color-reveal.color-mode { opacity: 0; }
   .piece { cursor: pointer; }
+
+  /* ---------- Gallery piece expand button + lightbox ---------- */
+  .piece-expand {
+    position: absolute; top: 8px; left: 8px; z-index: 3;
+    width: 30px; height: 30px; border-radius: 50%; padding: 0;
+    background: rgba(0,0,0,0.45); border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; transition: background .2s, transform .2s;
+  }
+  .piece-expand:hover { background: rgba(0,0,0,0.72); transform: scale(1.06); }
+  .piece-expand svg { width: 15px; height: 15px; }
+
+  .lightbox {
+    position: fixed; inset: 0; z-index: 10002;
+    background: rgba(20,16,10,0.92);
+    display: none; align-items: center; justify-content: center;
+    padding: 48px; cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); cursor: default; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px; background: none; border: none;
+    color: #fff; font-size: 2.2rem; line-height: 1; cursor: pointer; padding: 8px;
+  }
+  @media (max-width: 640px) { .lightbox { padding: 20px; } }
 </style>
 <script>
   window.addEventListener('DOMContentLoaded', () => {
@@ -216,9 +241,28 @@
     document.addEventListener('touchmove', setFromTouch, { passive: true });
 
     document.body.addEventListener('click', (e) => {
+      if (e.target.closest('.piece-expand')) return;
       if (e.target.closest('.piece')) {
         overlay.classList.toggle('color-mode');
       }
+    });
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    window.openLightbox = function (src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('open');
+    };
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
     });
   });
 </script>
@@ -342,6 +386,11 @@
     <span>B. Howard</span>
     <span>Multi-discipline creator</span>
   </footer>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
 
   <script src="js/content.js"></script>
   <script src="js/render-portfolio.js"></script>
