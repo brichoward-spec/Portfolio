@@ -196,6 +196,13 @@
   }
   .color-reveal.color-mode { opacity: 0; }
   .piece { cursor: pointer; }
+  .color-toggle {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--bg-soft); border: 1px solid var(--line); border-radius: 20px;
+    padding: 6px 14px; font-family: var(--display); font-weight: 600; font-size: 0.85rem;
+    color: var(--ink); cursor: pointer; transition: border-color .2s, color .2s;
+  }
+  .color-toggle:hover { border-color: var(--glow1); color: var(--glow1); }
 
   /* ---------- Gallery piece expand button + lightbox ---------- */
   .piece-expand {
@@ -240,12 +247,23 @@
     document.addEventListener('touchstart', setFromTouch, { passive: true });
     document.addEventListener('touchmove', setFromTouch, { passive: true });
 
+    const colorToggleBtn = document.getElementById('color-toggle');
+    function updateColorToggleLabel() {
+      if (colorToggleBtn) colorToggleBtn.textContent = overlay.classList.contains('color-mode') ? 'Grayscale' : 'Color';
+    }
+    function toggleColorMode() {
+      overlay.classList.toggle('color-mode');
+      updateColorToggleLabel();
+    }
+    updateColorToggleLabel();
+
     document.body.addEventListener('click', (e) => {
       if (e.target.closest('.piece-expand')) return;
       if (e.target.closest('.piece')) {
-        overlay.classList.toggle('color-mode');
+        toggleColorMode();
       }
     });
+    if (colorToggleBtn) colorToggleBtn.addEventListener('click', toggleColorMode);
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -280,6 +298,7 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
         <a href="professional.html">Resume →</a>
+        <button id="color-toggle" class="color-toggle" type="button">Color</button>
       </nav>
     </div>
   </div>
