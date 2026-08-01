@@ -54,13 +54,15 @@ for (const category of Object.keys(categoryMeta)) {
       const outFile = path.join(outDir, outName);
       fs.copyFileSync(srcFile, outFile);
 
-      items.push({
+      const entry = {
         title,
         image: `/img/uploads/${outName}`,
         tag: category,
         color: meta.color,
         _cat: category,
-      });
+      };
+      if (/\(digital\)/i.test(title)) entry.digital = true;
+      items.push(entry);
     }
   }
 }

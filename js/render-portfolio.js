@@ -81,6 +81,9 @@
               })
             );
           }
+          if (piece.digital) {
+            card.appendChild(CMS.el("div", { class: "digital-tape", text: "DIGITAL" }));
+          }
           grid.appendChild(card);
         });
         section.appendChild(grid);

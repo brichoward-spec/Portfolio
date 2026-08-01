@@ -133,6 +133,7 @@ collections:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "image", label: "Image", widget: "image" }
               - { name: "tag", label: "Tag / category label", widget: "string" }
+              - { name: "digital", label: "Digital piece (shows a \"DIGITAL\" tape sticker on the thumbnail)", widget: "boolean", default: false }
               - name: "color"
                 label: "Tag accent color"
                 widget: "select"
