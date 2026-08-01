@@ -202,7 +202,8 @@
       "title": "Illustration 7",
       "image": "/img/uploads/gallery-illustration-7.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 8",
