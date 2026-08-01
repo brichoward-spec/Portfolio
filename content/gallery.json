@@ -160,37 +160,43 @@
       "title": "Illustration 1",
       "image": "/img/uploads/gallery-illustration-1.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 2",
       "image": "/img/uploads/gallery-illustration-2.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 3",
       "image": "/img/uploads/gallery-illustration-3.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 4",
       "image": "/img/uploads/gallery-illustration-4.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 5",
       "image": "/img/uploads/gallery-illustration-5.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 6",
       "image": "/img/uploads/gallery-illustration-6.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Illustration 7",
@@ -208,7 +214,8 @@
       "title": "Illustration 9",
       "image": "/img/uploads/gallery-illustration-9.jpg",
       "tag": "Illustration",
-      "color": "glow2"
+      "color": "glow2",
+      "digital": true
     },
     {
       "title": "Army of Darkness (digital)",
