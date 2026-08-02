@@ -1,10 +1,31 @@
 # Moving portfolio images to self-hosted MinIO
 
-Status: **code is written and committed, but dormant.** The portfolio's
-image uploads still go through the git-based CMS storage exactly like
-before — nothing changes for Brianna's day-to-day editing until every
-step below is done AND the config is switched over (last step,
-explicitly separate on purpose, so this can't half-break anything).
+Status: **on hold, partially reverted.** Adding a `package.json` +
+`netlify/functions/` made Netlify's deploy start failing outright
+(three pushes in a row never went live — the site kept serving the
+last good deploy from before this work, which is why nothing broke
+for real). Tried the two standard fixes for that (missing
+`package-lock.json`, missing `npm run build` script) and neither
+fixed it, which means the actual cause needs the real build log —
+something only visible from inside the Netlify dashboard, not
+guessable from outside.
+
+**What's still in the repo:** `js/media-library-minio.js` (the
+browser-side picker) and its registration in `admin/index.html` — both
+plain static files, no build step, harmless and inert since nothing
+points a CMS field at the `minio` media library yet.
+
+**What's been pulled back out:** `package.json`, `package-lock.json`,
+`netlify.toml`, and `netlify/functions/*.js` (the two serverless
+functions) — removed from the repo for now so normal static deploys
+work again, including Brianna's own edits through `/admin`.
+
+**To pick this back up:** check Netlify's dashboard → the failed
+deploys around [date this was attempted] → **Deploy log** — the actual
+error will be near the bottom. Once that's known, the functions can go
+back in with whatever that error actually calls for (their code is
+below, unchanged, ready to restore). Steps 1–4 below are otherwise
+still accurate for the MinIO/Unraid side.
 
 ## What this is
 
