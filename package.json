@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-site",
+  "private": true,
+  "description": "Static portfolio site. This package.json exists only so Netlify installs the two dependencies the media-library serverless functions need (netlify/functions/) — the site itself has no build step.",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/s3-request-presigner": "^3.600.0"
+  }
+}
