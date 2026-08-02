@@ -1,0 +1,11 @@
+services:
+  media-api:
+    build: .
+    container_name: portfolio-media-api
+    restart: unless-stopped
+    ports:
+      # host:container — change 8090 if it's taken. Point NPM/SWAG at
+      # <unraid-ip>:8090 on whatever subdomain you pick (e.g. media-api.yourdomain.com).
+      - "8090:8090"
+    env_file:
+      - .env

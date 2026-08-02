@@ -1,0 +1,13 @@
+services:
+  portfolio-site:
+    build: .
+    container_name: portfolio-site
+    restart: unless-stopped
+    ports:
+      # host:container — change 8089 if it's taken. Point Nginx Proxy
+      # Manager / SWAG's proxy host at <unraid-ip>:8089.
+      - "8089:80"
+    environment:
+      - PULL_INTERVAL=120 # seconds between checks for new commits
+      # - REPO_URL=https://github.com/brichoward-spec/Portfolio.git
+      # - BRANCH=main

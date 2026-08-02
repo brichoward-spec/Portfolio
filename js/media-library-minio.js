@@ -1,12 +1,13 @@
 // Custom Decap CMS media library backed by self-hosted MinIO instead of
-// git. Dormant until MINIO_API_TOKEN below matches the MEDIA_API_TOKEN
-// Netlify env var and a collection's field sets media_library: { name: "minio" }
-// — see MINIO-SETUP.md. Does nothing until then; doesn't affect the
+// git. Dormant until MEDIA_API_BASE/API_TOKEN below are filled in and a
+// collection field sets media_library: { name: "minio" } — see
+// deploy/unraid/README.md. Does nothing until then; doesn't affect the
 // existing git-based media fields.
 (function () {
-  var API_TOKEN = "REPLACE_WITH_MEDIA_TOKEN"; // must match Netlify env var MEDIA_API_TOKEN
-  var SIGN_URL = "/.netlify/functions/media-sign-upload";
-  var LIST_URL = "/.netlify/functions/media-list";
+  var MEDIA_API_BASE = "https://media-api.yourdomain.com"; // the media-api container's public URL
+  var API_TOKEN = "REPLACE_WITH_MEDIA_TOKEN"; // must match MEDIA_API_TOKEN in media-api's .env
+  var SIGN_URL = MEDIA_API_BASE + "/sign-upload";
+  var LIST_URL = MEDIA_API_BASE + "/list";
 
   function el(tag, attrs, children) {
     var e = document.createElement(tag);
